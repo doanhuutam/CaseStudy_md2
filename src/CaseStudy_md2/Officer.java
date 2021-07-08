@@ -68,7 +68,7 @@ public class Officer {
                 ", salary=" + salary +
                 '}';
     }
-    public String show(){
+    public String sho(){
         return Name+","+Status+","+Age+","+Gender+","+salary;
     }
 }

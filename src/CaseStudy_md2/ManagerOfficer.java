@@ -9,7 +9,8 @@ public class ManagerOfficer {
     Scanner scanner = new Scanner(System.in);
     ArrayList<Officer> list = new ArrayList<>();
 
-    public void addOfficer_FullTime(String type) {
+
+    public void add(String type) {
         Officer officer;
         if (type.equals("Part-Time")) {
             officer = creat(type);
@@ -27,16 +28,65 @@ public class ManagerOfficer {
 //    }
 
     public Officer creat(String type) {
-        System.out.println("nhập tên nhân viên");
-        String Name = scanner.nextLine();
-        System.out.println("nhập tuổi nhân viên");
-        int age = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập giới tính nhân viên");
-        String Gender = scanner.nextLine();
-        System.out.println("nhập trạng thái nhân viên");
-        String Status = scanner.nextLine();
-        System.out.println("nhập lương cứng nhân viên");
-        double salary = Double.parseDouble(scanner.nextLine());
+        String Name;
+        while (true) {
+            System.out.println("nhập tên nhân viên");
+            Name = scanner.nextLine();
+            if (Name != "") {
+                break;
+            } else {
+                System.out.println("hãy điền đầy đủ trường tên");
+            }
+        }
+
+        Integer age;
+        while (true) {
+            try {
+                System.out.println("nhập tuổi nhân viên");
+                age = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (Exception e){
+                System.out.println("tuổi phải là số");
+            }
+        }
+        String Gender;
+            while (true){
+                try {
+                    System.out.println("nhập giới tính nhân viên:nam/nữ");
+                    Gender = scanner.nextLine();
+                    if (GenderNum.validate(Gender)){
+                        break;
+                    }
+                } catch (Exception e) {
+                    System.out.println("chỉ chấp nhận 2 giới tính");
+                }
+
+            }
+        String Status;
+            while (true) {
+                try {
+                    System.out.println("nhập trạng thái nhân viên:true/false");
+                    Status = scanner.nextLine();
+                    if (GenderNum.valida(Status)) {
+                        break;
+                    }
+                } catch (Exception e) {
+                    System.out.println("nhân viên chỉ có 2 trạng thái");
+                }
+            }
+
+        Double salary;
+        while (true){
+            try {
+                System.out.println("nhập lương cứng nhân viên");
+                salary = Double.parseDouble(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("lương phải là số");
+            }
+
+        }
+
         if (type.equals("Part-Time")) {
             System.out.println("nhập số giờ làm của nhân viên passtime");
             double WorkTime = Double.parseDouble(scanner.nextLine());
@@ -53,18 +103,31 @@ public class ManagerOfficer {
         System.out.println("nhập tên nhân viên muốn xoá");
         String name = scanner.nextLine();
         for (int i = 0; i < list.size(); i++) {
-            Officer officer = list.get(i);
-            if (officer.getName().equals(name)) {
-                list.remove(officer);
-                System.out.println(list);
+            if (list.get(i).getName().equals(name)){
+                System.out.println(list.get(i).toString()+""+"đang ở vị trí thứ "+i);
             }
+//            Officer officer = list.get(i);
+//            if (officer.getName().equals(name)) {
+//                list.remove(officer);
+//            }
+        }
+        System.out.println("nhập vị trí nhân viên muốn xoá");
+        int index=Integer.parseInt(scanner.nextLine());
+        Officer officer=list.get(index);
+        if (officer.getName().equals(name)){
+            list.remove(officer);
+        }
+        try {
+            writeFile();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     public void update(String name) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getName().equals(name)) {
-                System.out.println(list.get(i).toString() + " " + i);
+                System.out.println(list.get(i).toString() + " " +"đang ở vị trí thứ"+ i);
             }
         }
         System.out.println("nhập vị trí của nhân viên thay đổi");
@@ -85,11 +148,11 @@ public class ManagerOfficer {
     }
 
     public void Seach() {
-        System.out.println("nhập nhân viên bạn muốn");
+        System.out.println("nhập nhân viên bạn muốn tìm kiếm");
         String Name = scanner.nextLine();
         for (Officer gg : list) {
             if (gg.getName().equals(Name)) {
-                System.out.println("nhân viên đã" + gg);
+                System.out.println("nhân viên cần tìm kiếm:::" + gg);
             }
 
         }
@@ -112,23 +175,24 @@ public class ManagerOfficer {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getName().equals(name)) {
                 System.out.println("Sửa trạng thái thành");
-                    list.get(i).setStatus(scanner.nextLine());
-                }
+                list.get(i).setStatus(scanner.nextLine());
             }
         }
-        File ahihi=new File("ahihi.csv");
+    }
+
+    File ahihi = new File("ahihi.csv");
     BufferedReader bufferedReader;
     BufferedWriter bufferedWriter;
-    String tieude="tên,trạng thái,tuổi ,giới tính,lương";
+    String tieude = "tên,trạng thái,tuổi ,giới tính,lương";
 
     public void writeFile() throws IOException {
         try {
-            FileWriter fileWriter=new FileWriter(ahihi);
-            BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
+            FileWriter fileWriter = new FileWriter(ahihi);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(tieude);
-            for (Officer gg:list) {
+            for (Officer gg : list) {
                 bufferedWriter.newLine();
-                bufferedWriter.write(gg.show());
+                bufferedWriter.write(gg.sho());
             }
             bufferedWriter.close();
         } catch (IOException e) {
@@ -136,15 +200,19 @@ public class ManagerOfficer {
         }
 
     }
-    public void readFile(){
-        try {
-            FileReader fileReader=new FileReader(ahihi);
-            BufferedReader bufferedReader=new BufferedReader(fileReader);
-            String line=bufferedReader.readLine();
-            while ((line=bufferedReader.readLine())!=null){
-                String[] arr=line.split(",");
-                list.add(new Officer(arr[0],arr[1],Integer.parseInt(arr[2]),arr[3],Double.parseDouble(arr[4])));
 
+    public void readFile() {
+        try {
+            FileReader fileReader = new FileReader(ahihi);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = bufferedReader.readLine();
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] arr = line.split(",");
+                if (arr.length ==5) {
+                    list.add(new OfficerFulltime(arr[0], arr[1], Integer.parseInt(arr[2]), arr[3], Double.parseDouble(arr[4])));
+                } else {
+                    list.add(new OfficerPasstime(arr[0], arr[1], Integer.parseInt(arr[2]), arr[3], Double.parseDouble(arr[4]),Double.parseDouble(arr[5])));
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -152,4 +220,38 @@ public class ManagerOfficer {
             e.printStackTrace();
         }
     }
+
+    public void Status_md() {
+        System.out.println("nhân viên đang đi làm là");
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getStatus().equals("true")) {
+
+                System.out.println(list.get(i).getName());
+            }else {
+                System.out.println("không có nhân viên trên");
+            }
+        }
+        System.out.println("nhân viên đã nghỉ làm là");
+        for (int i = 0; i < list.size(); i++) {
+            if (!list.get(i).getStatus().equals("true")) {
+                System.out.println(list.get(i).getName());
+            }
+        }
     }
+    public void Slary(){
+        System.out.println("lương nhân viên pass time là:");
+        for (int i=0;i<list.size();i++){
+            if (list.get(i) instanceof OfficerPasstime){
+                System.out.println("tên nhân viên "+list.get(i).getName() + " " + "có tiền lương là"+ ((OfficerPasstime) list.get(i)).getTotalSalary());
+            }
+        }
+        System.out.println("lương nhân viên full time là:");
+        for (int i=0;i<list.size();i++){
+            if (list.get(i) instanceof OfficerFulltime){
+                System.out.println("tên nhân viên"+list.get(i).getName() + " " + "có tiền lương là"+ ((OfficerFulltime) list.get(i)).getSalary());
+            }
+        }
+
+    }
+
+}

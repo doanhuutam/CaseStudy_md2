@@ -36,4 +36,8 @@ public class OfficerPasstime extends Officer{
                 ",Worktime=" + Worktime +
                 '}';
     }
+
+    public String sho(){
+        return getName()+","+getStatus()+","+getAge()+","+getGender()+","+getSalary()+","+getWorktime();
+    }
 }
