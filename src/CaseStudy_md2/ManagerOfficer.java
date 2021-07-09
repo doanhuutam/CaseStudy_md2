@@ -144,6 +144,7 @@ public class ManagerOfficer {
     public void show() {
         for (Officer ahihi : list) {
             System.out.println(ahihi);
+            System.out.println("");
         }
     }
 
@@ -151,7 +152,7 @@ public class ManagerOfficer {
         System.out.println("nhập nhân viên bạn muốn tìm kiếm");
         String Name = scanner.nextLine();
         for (Officer gg : list) {
-            if (gg.getName().equals(Name)) {
+            if (gg.getName().contains(Name)) {
                 System.out.println("nhân viên cần tìm kiếm:::" + gg);
             }
 

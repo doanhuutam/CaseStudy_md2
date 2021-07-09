@@ -92,6 +92,18 @@ public class Main {
                     break;
                 case 6:
                     ManagerUser.showuser();
+                    System.out.println("bạn có muốn đâng xuất khỏi chương trình không");
+                    System.out.println("1.<-có->");
+                    System.out.println("2.<--không-->");
+                    int choice5 = Integer.parseInt(scanner.nextLine());
+                    switch (choice5) {
+                        case 1:
+                            ManagerUser.menu1();
+                            break;
+                        case 2:
+                            break;
+                    }
+                    break;
 
             }
         }
