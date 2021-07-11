@@ -54,6 +54,9 @@ public class ManagerUser {
             }
         }
         System.out.println("thông tin mật khẩu hoặc tài khoản không đúng");
+        System.out.println("mời bạn trải nghiệm với vị trí nhân viên thường");
+        ManagerBoss.menu2();
+
     }
 
     private static void signUp() throws IOException {
