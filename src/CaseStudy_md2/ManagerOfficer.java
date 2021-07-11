@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class ManagerOfficer {
     Scanner scanner = new Scanner(System.in);
     ArrayList<Officer> list = new ArrayList<>();
-
+int count=0;
 
     public void add(String type) {
         Officer officer;
@@ -18,6 +18,8 @@ public class ManagerOfficer {
             officer = creat(type);
         }
         list.add(officer);
+        count++;
+        System.out.println("đang quản lý" +" "+count+" "+"nhân viên");
     }
 
 //    public void addOfficer_PassTime() {

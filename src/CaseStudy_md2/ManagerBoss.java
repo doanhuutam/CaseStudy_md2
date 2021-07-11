@@ -19,9 +19,11 @@ public class ManagerBoss {
             }
             switch (choice) {
                 case 1:
+                    managerOfficer.readFile();
                     managerOfficer.show();
                     break;
                 case 2:
+                    managerOfficer.readFile();
                    managerOfficer.Slary();
                     break;
 

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fadd5339-80d8-40b5-ba7b-7e67af630e0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CaseStudy_md2/BossOfficer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerBoss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ahihi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ahihi.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerBoss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerBoss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerBoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerBoss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerOfficer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -108,6 +97,8 @@
       <workItem from="1625793403921" duration="5258000" />
       <workItem from="1625813891164" duration="1166000" />
       <workItem from="1625956678580" duration="2924000" />
+      <workItem from="1625979117680" duration="1861000" />
+      <workItem from="1626039188742" duration="1268000" />
     </task>
     <servers />
   </component>
