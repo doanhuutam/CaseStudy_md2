@@ -11,6 +11,7 @@ public class ManagerBoss {
             Scanner scanner = new Scanner(System.in);
             System.out.println("1.hiển thị danh sách nhân viên");
             System.out.println("2.hiển thị mức lương của nhân viên");
+            System.out.println("3.exit");
             int choice = 0;
             try {
                 choice = Integer.parseInt(scanner.nextLine());

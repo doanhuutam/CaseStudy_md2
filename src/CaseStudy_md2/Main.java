@@ -20,7 +20,7 @@ public class Main {
             System.out.println("4.<----sửa thông tin nhân viên---->");
             System.out.println("5.<-----thay đổi trạng thái nhân viên----->");
             System.out.println("6.<------thông tin tài khoản------>");
-            System.out.println("7.test chức năng");
+
             int choice = 0;
             try {
                 choice = Integer.parseInt(scanner.nextLine());
@@ -115,6 +115,8 @@ public class Main {
                                     break;
                             }
                             break;
+                default:
+                    return;
 
                     }
             }

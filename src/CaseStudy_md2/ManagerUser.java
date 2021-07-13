@@ -18,6 +18,7 @@ public class ManagerUser {
         while (true) {
             System.out.println("1.đăng nhập tài khoản");
             System.out.println("2.đăng ký tài khoản");
+            System.out.println("3.exit");
             int choice = 0;
             try {
                 choice = Integer.parseInt(scanner.nextLine());

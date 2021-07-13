@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fadd5339-80d8-40b5-ba7b-7e67af630e0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Thi_md2/DanhBa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thi_md2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thi_md2/ManagerDanhBa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thi_md2/Regex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thi_md2/regexEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ahihi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ahihi.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerBoss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerBoss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/CaseStudy_md2/ManagerUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/dongoc.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/dongoc.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerBoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerBoss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy_md2/ManagerUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dongoc.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/dongoc.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +68,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thi_md2.Main" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thi_md2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CaseStudy_md2.Main" />
       <module name="untitled" />
@@ -73,8 +95,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -99,6 +133,11 @@
       <workItem from="1625956678580" duration="2924000" />
       <workItem from="1625979117680" duration="1861000" />
       <workItem from="1626039188742" duration="1268000" />
+      <workItem from="1626040491320" duration="91000" />
+      <workItem from="1626051400841" duration="720000" />
+      <workItem from="1626072806127" duration="1745000" />
+      <workItem from="1626093720122" duration="119000" />
+      <workItem from="1626162403827" duration="8891000" />
     </task>
     <servers />
   </component>
@@ -106,6 +145,15 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CaseStudy_md2/ManagerOfficer.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.io.FileWriter" memberName="writeBuffer" />
